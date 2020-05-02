@@ -7,10 +7,11 @@ public class Car {
     Integer enginePower;
     Double price;
 
-    public Car(String manufacturer, String model, Integer displacement, Integer enginePower) {
+    public Car(String manufacturer, String model, Integer displacement, Integer enginePower, Double price) {
         this.manufacturer = manufacturer;
         this.model = model;
         this.displacement = displacement;
         this.enginePower = enginePower;
+        this.price = price;
     }
 }
