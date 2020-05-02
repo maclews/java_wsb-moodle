@@ -1,5 +1,7 @@
 package wsb.moodle;
 
+import wsb.moodle.devices.Car;
+
 import java.time.LocalDateTime;
 
 public class Human {
@@ -50,5 +52,18 @@ public class Human {
         } else {
             System.out.println("Get yourself a better job or something first");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", pet=" + pet +
+                ", vehicle=" + vehicle +
+                ", salary=" + salary +
+                ", salaryLastAccessDateTime=" + salaryLastAccessDateTime +
+                ", salaryLastAccessValue=" + salaryLastAccessValue +
+                '}';
     }
 }

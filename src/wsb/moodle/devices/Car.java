@@ -1,11 +1,11 @@
-package wsb.moodle;
+package wsb.moodle.devices;
 
 public class Car {
     final String manufacturer;
     final String model;
     Integer displacement;
     Integer enginePower;
-    Double price;
+    public Double price;
 
     public Car(String manufacturer, String model, Integer displacement, Integer enginePower, Double price) {
         this.manufacturer = manufacturer;
@@ -13,5 +13,16 @@ public class Car {
         this.displacement = displacement;
         this.enginePower = enginePower;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", displacement=" + displacement +
+                ", enginePower=" + enginePower +
+                ", price=" + price +
+                '}';
     }
 }
