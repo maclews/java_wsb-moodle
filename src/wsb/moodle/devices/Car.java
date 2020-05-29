@@ -19,11 +19,12 @@ public class Car extends Device {
     @Override
     public String toString() {
         return "Car{" +
-                "manufacturer='" + manufacturer + '\'' +
-                ", model='" + model + '\'' +
-                ", displacement=" + displacement +
+                "displacement=" + displacement +
                 ", enginePower=" + enginePower +
                 ", price=" + price +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
                 '}';
     }
 }

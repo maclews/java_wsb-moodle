@@ -8,4 +8,9 @@ public class Phone extends Device {
     public void TurnOn() {
         System.out.println("Się włączyło. Chyba... bo zawibrowało. Ale dalej ciemno. (...) O! Teraz coś widać!");
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

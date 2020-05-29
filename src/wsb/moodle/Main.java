@@ -60,5 +60,8 @@ public class Main {
 
         ticomotywa.TurnOn();
         brick.TurnOn();
+
+        System.out.println(ticomotywa.toString());
+        System.out.println(brick.toString());
     }
 }
