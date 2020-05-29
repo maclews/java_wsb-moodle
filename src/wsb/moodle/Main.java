@@ -1,5 +1,6 @@
 package wsb.moodle;
 
+import wsb.moodle.creatures.Pet;
 import wsb.moodle.devices.Car;
 import wsb.moodle.devices.Phone;
 
@@ -14,27 +15,17 @@ public class Main {
 
 	    me.firstName = "Maciej";
 	    me.lastName = "Lewandowski";
-	    me.pet = new Animal("dog");
+	    me.pet = new Pet("dog");
 
-        me.pet.feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.feed();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.takeForAWalk();
-        me.pet.feed();
-        me.pet.feed();
+        me.pet.Feed();
+        me.pet.Feed();
+        me.pet.Feed();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
@@ -42,7 +33,17 @@ public class Main {
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
         me.pet.takeForAWalk();
-        me.pet.feed();
+        me.pet.takeForAWalk();
+        me.pet.Feed();
+        me.pet.Feed();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.takeForAWalk();
+        me.pet.Feed();
         me.pet.takeForAWalk();
 
         Car ticomotywa = new Car("Daewoo", "Tico", 1999, 796, 41, 4206.9);

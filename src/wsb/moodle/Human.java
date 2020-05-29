@@ -1,5 +1,6 @@
 package wsb.moodle;
 
+import wsb.moodle.creatures.Animal;
 import wsb.moodle.devices.Car;
 import wsb.moodle.devices.Phone;
 
@@ -8,7 +9,7 @@ import java.time.LocalDateTime;
 public class Human {
     String firstName;
     String lastName;
-    Animal pet;
+    public Animal pet;
     private Car vehicle;
     private Double salary;
     private LocalDateTime salaryLastAccessDateTime;

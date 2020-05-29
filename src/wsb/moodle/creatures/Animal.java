@@ -1,6 +1,9 @@
-package wsb.moodle;
+package wsb.moodle.creatures;
 
-public class Animal implements Sellable {
+import wsb.moodle.Human;
+import wsb.moodle.Sellable;
+
+public abstract class Animal implements Sellable, Feedable {
     final String species;
     private Double weight;
 
@@ -26,9 +29,17 @@ public class Animal implements Sellable {
         return this.weight > 0;
     }
 
-    public void feed() {
+    public void Feed() {
         if (isAlive()) {
             this.weight++;
+            System.out.println("Fed. Weight increased to " + this.weight + " kg");
+        }
+        else System.out.println("Better check Yellow Pages for a Necromancer or something...");
+    }
+
+    public void Feed(Double foodWeight) {
+        if (isAlive()) {
+            this.weight += foodWeight;
             System.out.println("Fed. Weight increased to " + this.weight + " kg");
         }
         else System.out.println("Better check Yellow Pages for a Necromancer or something...");
