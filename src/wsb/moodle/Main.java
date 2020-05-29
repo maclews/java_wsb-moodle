@@ -1,7 +1,9 @@
 package wsb.moodle;
 
 import wsb.moodle.creatures.Pet;
-import wsb.moodle.devices.Car;
+import wsb.moodle.devices.LPG;
+import wsb.moodle.devices.Diesel;
+import wsb.moodle.devices.Electric;
 import wsb.moodle.devices.Phone;
 
 import java.time.format.DateTimeFormatter;
@@ -46,10 +48,10 @@ public class Main {
         me.pet.Feed();
         me.pet.takeForAWalk();
 
-        Car ticomotywa = new Car("Daewoo", "Tico", 1999, 796, 41, 4206.9);
+        LPG ticomotywa = new LPG("Daewoo", "Tico", 1999, 796, 41, 4206.9);
         me.setVehicle(ticomotywa);
 
-        Car ticomotywa2 = new Car("Daewoo", "Tico", 1999, 796, 41, 4206.9);
+        LPG ticomotywa2 = new LPG("Daewoo", "Tico", 1999, 796, 41, 4206.9);
 
         System.out.println("-----------------------------------------------------------------------------------------");
         System.out.println(ticomotywa == ticomotywa2);
@@ -79,6 +81,15 @@ public class Main {
         me.tel = brick;
         me.tel.Sell(me, notMe, 1500.0);
         System.out.println(me.cash + " -- " + notMe.cash);
+
+        Electric tesla = new Electric("Tesla", "Model S", 2018, 0, 613, 50000.0);
+        Diesel passat = new Diesel("Wieśwagen", "Pastuch", 1998, 1900, 90, 500.0);
+
+        notMe.getVehicle().Refuel();
+        me.recieveVehicle(tesla);
+        me.getVehicle().Refuel();
+        me.recieveVehicle(passat);
+        me.getVehicle().Refuel();
 
     }
 }

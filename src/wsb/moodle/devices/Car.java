@@ -3,7 +3,7 @@ package wsb.moodle.devices;
 import wsb.moodle.Human;
 import wsb.moodle.Sellable;
 
-public class Car extends Device implements Sellable {
+public abstract class Car extends Device implements Sellable {
     Integer displacement;
     Integer enginePower;
     public Double price;
@@ -14,6 +14,8 @@ public class Car extends Device implements Sellable {
         this.enginePower = enginePower;
         this.price = price;
     }
+
+    public abstract void Refuel();
 
     public void TurnOn() {
         System.out.println("Słychać piękne wycie trzycilindrowej osiemsetki. No bo nie ma na świecie nic lepszego niż odpalana z samego rana Ticomotywa...");
