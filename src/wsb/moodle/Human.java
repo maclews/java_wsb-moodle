@@ -1,6 +1,7 @@
 package wsb.moodle;
 
 import wsb.moodle.devices.Car;
+import wsb.moodle.devices.Phone;
 
 import java.time.LocalDateTime;
 
@@ -12,6 +13,8 @@ public class Human {
     private Double salary;
     private LocalDateTime salaryLastAccessDateTime;
     private Double salaryLastAccessValue;
+    Double cash;
+    public Phone tel;
 
     public Human() {
         this.salary = 2600.0;
@@ -38,6 +41,14 @@ public class Human {
         }
     }
 
+    public Double getCash() {
+        return cash;
+    }
+
+    public void setCash(Double cash) {
+        this.cash = cash;
+    }
+
     public Car getVehicle() {
         return vehicle;
     }
@@ -52,6 +63,14 @@ public class Human {
         } else {
             System.out.println("Get yourself a better job or something first");
         }
+    }
+
+    public void recieveVehicle(Car usedCar) {
+        this.vehicle = usedCar;
+    }
+
+    public void unsetVehicle() {
+        this.vehicle = null;
     }
 
     @Override

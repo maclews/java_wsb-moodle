@@ -63,5 +63,21 @@ public class Main {
 
         System.out.println(ticomotywa.toString());
         System.out.println(brick.toString());
+
+        Human notMe = new Human();
+
+        me.cash = 10000.0;
+        notMe.cash = 20000.0;
+
+        me.pet.Sell(me, notMe, 500.0);
+        System.out.println(me.cash + " -- " + notMe.cash);
+
+        me.getVehicle().Sell(me, notMe, 2000.0);
+        System.out.println(me.cash + " -- " + notMe.cash);
+
+        me.tel = brick;
+        me.tel.Sell(me, notMe, 1500.0);
+        System.out.println(me.cash + " -- " + notMe.cash);
+
     }
 }

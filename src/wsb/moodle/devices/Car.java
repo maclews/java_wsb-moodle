@@ -1,6 +1,9 @@
 package wsb.moodle.devices;
 
-public class Car extends Device {
+import wsb.moodle.Human;
+import wsb.moodle.Sellable;
+
+public class Car extends Device implements Sellable {
     Integer displacement;
     Integer enginePower;
     public Double price;
@@ -14,6 +17,18 @@ public class Car extends Device {
 
     public void TurnOn() {
         System.out.println("Słychać piękne wycie trzycilindrowej osiemsetki. No bo nie ma na świecie nic lepszego niż odpalana z samego rana Ticomotywa...");
+    }
+
+    public void Sell(Human seller, Human buyer, Double price) {
+        if (buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            buyer.recieveVehicle(seller.getVehicle());
+            seller.unsetVehicle();
+            System.out.println("Pojazd został sprzedany nowemu właścicielowi.");
+        } else {
+            System.out.println("Za mało siana.");
+        }
     }
 
     @Override

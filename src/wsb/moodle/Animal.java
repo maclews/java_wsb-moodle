@@ -1,6 +1,6 @@
 package wsb.moodle;
 
-public class Animal {
+public class Animal implements Sellable {
     final String species;
     private Double weight;
 
@@ -40,6 +40,18 @@ public class Animal {
             System.out.println("They see me rollin', they hatin', cuz my weight got down to " + this.weight + " kg");
         }
         else System.out.println("Erm... Dragging a not-very-alive body is not necessarily \"taking for a walk\" you know...");
+    }
+
+    public void Sell(Human seller, Human buyer, Double price) {
+        if (buyer.getCash() >= price) {
+            buyer.setCash(buyer.getCash() - price);
+            seller.setCash(seller.getCash() + price);
+            buyer.pet = seller.pet;
+            seller.pet = null;
+            System.out.println("Zwierzę zostało sprzedane nowemu właścicielowi.");
+        } else {
+            System.out.println("Za mało siana.");
+        }
     }
 
     @Override
