@@ -1,18 +1,19 @@
 package wsb.moodle.devices;
 
-public class Car {
-    final String manufacturer;
-    final String model;
+public class Car extends Device {
     Integer displacement;
     Integer enginePower;
     public Double price;
 
-    public Car(String manufacturer, String model, Integer displacement, Integer enginePower, Double price) {
-        this.manufacturer = manufacturer;
-        this.model = model;
+    public Car(String manufacturer, String model, Integer yearOfProduction, Integer displacement, Integer enginePower, Double price) {
+        super(manufacturer, model, yearOfProduction);
         this.displacement = displacement;
         this.enginePower = enginePower;
         this.price = price;
+    }
+
+    public void TurnOn() {
+        System.out.println("Słychać piękne wycie trzycilindrowej osiemsetki. No bo nie ma na świecie nic lepszego niż odpalana z samego rana Ticomotywa...");
     }
 
     @Override
